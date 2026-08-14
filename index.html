@@ -49,6 +49,38 @@ h1{font-size:clamp(38px,5vw,56px);line-height:1.02;letter-spacing:-2.3px;margin:
 
 .footer{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.3fr;gap:20px;align-items:center;padding:12px 0 20px}.footer-brand{display:flex;gap:9px;align-items:center}.footer .logo{font-size:30px}.footer strong{font-size:11px}.footer small{display:block;color:#8c969c;font-size:8px}.footer-item{font-size:9px;color:#a6afb4}.footer-bottom{text-align:center;color:#5e686e;font-size:8px;padding:8px 0 20px;border-top:1px solid rgba(255,255,255,.03)}
 
+
+/* =========================================
+   TECHNICAL SKILLS
+========================================= */
+
+.skills-section{padding:28px 0}
+.skills-intro{max-width:650px;margin:0 auto 18px;text-align:center}
+.skills-intro p{color:#89959b;font-size:10px;line-height:1.55;margin:8px auto 0}
+
+.skills-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+
+.skill-card{
+    background:linear-gradient(145deg,#12191e,#0f1519);
+    border:1px solid rgba(255,255,255,.045);
+    border-radius:9px;
+    padding:15px;
+    min-height:205px;
+    transition:transform .25s ease,border-color .25s ease,box-shadow .25s ease
+}
+.skill-card:hover{transform:translateY(-3px);border-color:#17613f;box-shadow:0 12px 30px rgba(0,0,0,.22)}
+.skill-card-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:11px}
+.skill-icon{width:34px;height:34px;display:flex;align-items:center;justify-content:center;border-radius:8px;background:#0c2119;border:1px solid #164c36;color:var(--green);font-size:10px;font-weight:900}
+.skill-number{color:#5f6b71;font-size:8px;font-weight:800;letter-spacing:.7px}
+.skill-card h3{font-size:12px;line-height:1.2;margin:0 0 6px}
+.skill-card > p{color:#8e999f;font-size:9px;line-height:1.45;margin:0 0 11px}
+.skill-tags{display:flex;flex-wrap:wrap;gap:5px}
+.skill-tags span{background:#20282e;border:1px solid rgba(255,255,255,.035);color:#c7ced1;border-radius:4px;padding:4px 6px;font-size:8px;line-height:1.2;font-weight:700;transition:background .2s ease,color .2s ease,border-color .2s ease}
+.skill-tags span:hover{background:#0c2d20;border-color:#17613f;color:var(--green)}
+
+@media(max-width:900px){.skills-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.skills-section{padding:22px 0}.skills-grid{grid-template-columns:1fr}.skill-card{min-height:0}}
+
 @media(max-width:900px){.links{display:none}.cv{margin-left:auto}.hero-grid{grid-template-columns:1fr}.hero-content{padding:20px 0}.hero-photo{height:390px}.tech-grid{grid-template-columns:repeat(5,1fr)}.cards{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:600px){.nav{height:60px}.brand{min-width:0}.brand-text{font-size:11px}.hero-photo{height:320px}.trusted-row{grid-template-columns:repeat(3,1fr)}.tech-grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr);gap:10px}.stat{border:0}.cards,.projects,.testimonials{grid-template-columns:1fr}.contact-box{display:block}.contact-left{margin-bottom:12px}.footer{grid-template-columns:1fr 1fr}}
 .project-shot.image-error::after{content:"Project image unavailable";color:#8d98a5;font-size:12px;letter-spacing:.04em}
@@ -95,6 +127,74 @@ h1{font-size:clamp(38px,5vw,56px);line-height:1.02;letter-spacing:-2.3px;margin:
 <div class="card"><div class="icon">♨</div><h3>Performance Optimization</h3><p>Speed up your website for better performance, SEO rankings, and user experience.</p></div>
 <div class="card"><div class="icon">✿</div><h3>Maintenance &amp; Support</h3><p>Reliable ongoing maintenance and support to keep your website running well.</p></div>
 </div></div></section>
+
+
+<section id="skills" class="section skills-section"><div class="container">
+
+<div class="skills-intro">
+<h2 class="section-title">TECHNICAL EXPERTISE →</h2>
+<p>A combination of WordPress development, page builders, e-commerce, LMS and membership platforms, dynamic content, and third-party integrations.</p>
+</div>
+
+<div class="skills-grid">
+
+<div class="skill-card">
+<div class="skill-card-top"><div class="skill-icon">WP</div><span class="skill-number">01</span></div>
+<h3>WordPress Development</h3>
+<p>Building, customizing, and maintaining professional WordPress websites and custom functionality.</p>
+<div class="skill-tags">
+<span>WordPress</span><span>PHP</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>MySQL</span><span>Custom Post Types</span><span>Custom Fields</span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-card-top"><div class="skill-icon">PB</div><span class="skill-number">02</span></div>
+<h3>Page Builders</h3>
+<p>Creating responsive layouts and custom website experiences using leading WordPress page builders.</p>
+<div class="skill-tags">
+<span>Elementor</span><span>Elementor Pro</span><span>Bricks</span><span>Divi</span><span>Kadence</span><span>Gutenberg</span><span>Beaver Builder</span><span>WPBakery</span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-card-top"><div class="skill-icon">EC</div><span class="skill-number">03</span></div>
+<h3>E-commerce</h3>
+<p>Building and customizing WooCommerce stores, subscriptions, checkout flows, and payment systems.</p>
+<div class="skill-tags">
+<span>WooCommerce</span><span>WooCommerce Subscriptions</span><span>Payment Gateways</span><span>Checkout Customization</span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-card-top"><div class="skill-icon">LM</div><span class="skill-number">04</span></div>
+<h3>LMS &amp; Membership</h3>
+<p>Developing learning management systems, membership platforms, communities, and user access workflows.</p>
+<div class="skill-tags">
+<span>LearnDash</span><span>BuddyBoss</span><span>GamiPress</span><span>Memberium</span><span>Paid Memberships Pro</span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-card-top"><div class="skill-icon">DC</div><span class="skill-number">05</span></div>
+<h3>Dynamic Content</h3>
+<p>Creating dynamic WordPress websites using custom post types, custom fields, queries, and advanced content structures.</p>
+<div class="skill-tags">
+<span>Crocoblock</span><span>JetEngine</span><span>JetFormBuilder</span><span>ACF</span>
+</div>
+</div>
+
+<div class="skill-card">
+<div class="skill-card-top"><div class="skill-icon">API</div><span class="skill-number">06</span></div>
+<h3>Integrations</h3>
+<p>Connecting WordPress websites with marketing, automation, CRM, forms, and external services.</p>
+<div class="skill-tags">
+<span>ActiveCampaign</span><span>Zapier</span><span>WP Fusion</span><span>Webhooks</span><span>Forms</span><span>APIs</span>
+</div>
+</div>
+
+</div>
+</div></section>
+
 
 <section id="projects" class="section"><div class="container">
 <h2 class="section-title">FEATURED PROJECTS →</h2>
