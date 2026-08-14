@@ -1,137 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link rel="icon" type="image/png" href="./favicon.png">
-
-    <title>Albert Villagracia | WordPress Developer</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Albert Villagracia — WordPress Developer specializing in WordPress, WooCommerce, LMS, membership websites, integrations and performance optimization.">
+<link rel="icon" type="image/png" href="./favicon.png">
+<title>Albert Villagracia | WordPress Developer</title>
 <style>
-:root{
-  --bg:#080b0d;--card:#101518;--text:#f4f7f8;--muted:#aab5bd;
-  --green:#31d69a;--green2:#18b97e;--line:#253039;--max:1180px;
-}
+:root{--bg:#070b0e;--panel:#11171c;--panel2:#151c22;--text:#f4f7f8;--muted:#a5b0b7;--green:#20c987;--green2:#19b978;--line:#263038;--max:1080px}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.6}
+body{margin:0;background:radial-gradient(circle at 50% 0,#0c1519 0,#070b0e 38%,#05080a 100%);color:var(--text);font-family:Inter,Arial,sans-serif;line-height:1.55}
 a{text-decoration:none;color:inherit}.container{width:min(92%,var(--max));margin:auto}
-nav{position:sticky;top:0;z-index:20;background:rgba(8,11,13,.86);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.05)}
-.nav{height:82px;display:flex;align-items:center;gap:30px}
-.brand{display:flex;align-items:center;gap:13px;font-size:20px;font-weight:800;white-space:nowrap}
-.logo{color:var(--green);font-size:25px;font-weight:900}.navlinks{display:flex;gap:32px;margin-left:auto;color:#c4ccd1;font-size:15px}
-.navlinks a:hover,.navlinks a.active{color:var(--green)}
-.cv{border:1px solid var(--green);padding:11px 18px;border-radius:9px;font-weight:700;margin-left:20px}
-.cv:hover{background:var(--green);color:#07100c}
-.hero{padding:42px 0 72px}.hero-grid{display:grid;grid-template-columns:1fr 1.08fr;gap:65px;align-items:center}
-.photo-wrap{position:relative}.photo-wrap:after{content:"";position:absolute;inset:12px -12px -12px 12px;border:1px solid rgba(49,214,154,.18);border-radius:28px;z-index:-1}
-.hero-photo{display:block;width:100%;height:695px;object-fit:cover;object-position:center 38%;border-radius:28px;filter:grayscale(100%);box-shadow:0 0 60px rgba(49,214,154,.12)}
-.badge{display:inline-flex;align-items:center;gap:10px;background:#0d211a;border:1px solid #163e2e;color:var(--green);padding:8px 15px;border-radius:999px;font-size:13px;font-weight:800;letter-spacing:.6px;text-transform:uppercase}
-.dot{width:9px;height:9px;border-radius:50%;background:var(--green);box-shadow:0 0 14px var(--green)}
-h1{font-size:clamp(46px,6vw,76px);line-height:1.02;letter-spacing:-3px;margin:24px 0}
-h1 span{color:var(--green)}.hero-copy{font-size:18px;color:var(--muted);max-width:650px}
-.buttons{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}.btn{padding:14px 22px;border-radius:9px;border:1px solid var(--green);font-weight:800}
-.btn.primary{background:var(--green);color:#06100c}.btn:hover{transform:translateY(-2px)}
-.trusted{padding:0 0 70px}.trusted-title{font-size:13px;letter-spacing:2px;color:#7f8a91;font-weight:800;margin-bottom:22px}
-.tools{display:grid;grid-template-columns:repeat(6,1fr);gap:14px}
-.tool{border:1px solid var(--line);background:#0d1114;border-radius:12px;padding:18px 10px;text-align:center;color:#8e989e;font-weight:800;font-size:14px}
-section{padding:100px 0;border-top:1px solid rgba(255,255,255,.04)}
-.eyebrow{color:var(--green);font-size:12px;letter-spacing:2px;font-weight:900;text-transform:uppercase}
-.section-title{font-size:clamp(36px,5vw,58px);line-height:1.05;letter-spacing:-2px;margin:12px 0 45px}
-.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:70px}.about p{color:var(--muted);font-size:17px}
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:28px}.card h3{margin-top:0;font-size:22px}.card p{color:var(--muted);font-size:14px}
-.tags{display:flex;gap:7px;flex-wrap:wrap}.tag{border:1px solid var(--line);border-radius:999px;padding:5px 9px;font-size:12px;color:#c4ccd1}
-.skills{display:flex;flex-wrap:wrap;gap:10px}.skill{background:var(--card);border:1px solid var(--line);padding:10px 14px;border-radius:8px;color:#d2d9dd}
-.contact-box{background:linear-gradient(135deg,#0e2019,#0d1215);border:1px solid #214334;border-radius:22px;padding:50px}
-.contact-box p{color:var(--muted);max-width:650px}.email{font-size:clamp(25px,4vw,44px);font-weight:900;color:var(--green);word-break:break-word}
-footer{border-top:1px solid var(--line);padding:28px 0;color:#737e85;font-size:13px}
-@media(max-width:900px){
- .navlinks{display:none}.cv{margin-left:auto}.hero-grid,.about-grid{grid-template-columns:1fr}.hero-photo{height:560px}.tools{grid-template-columns:repeat(3,1fr)}.cards{grid-template-columns:1fr}
-}
-@media(max-width:560px){
- .nav{height:70px}.brand{font-size:17px}.cv{padding:9px 12px;font-size:13px}.hero{padding-top:28px}
- .hero-photo{height:430px}.hero-grid{gap:40px}h1{letter-spacing:-2px}.tools{grid-template-columns:repeat(2,1fr)}
-}
+nav{position:sticky;top:0;z-index:30;background:rgba(7,11,14,.88);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,.035)}
+.nav{height:70px;display:flex;align-items:center;gap:25px}.brand{display:flex;align-items:center;gap:10px;min-width:210px}
+.logo{font-size:34px;line-height:1;color:var(--green);font-weight:900;letter-spacing:-5px}
+.brand-text{font-weight:800;font-size:13px;line-height:1.2}.brand-text small{display:block;color:#9aa5ab;font-size:9px;font-weight:500;margin-top:3px}
+.links{display:flex;align-items:center;gap:27px;margin-left:auto;font-size:11px;font-weight:700;color:#c6cdd1}.links a{padding:25px 0}.links a:hover,.links .active{color:var(--green);border-bottom:2px solid var(--green)}
+.cv{margin-left:10px;border:1px solid var(--green);border-radius:7px;padding:9px 14px;font-size:11px;font-weight:800;white-space:nowrap}.cv:hover{background:var(--green);color:#06100c}
+
+.hero{padding:20px 0 23px}.hero-grid{display:grid;grid-template-columns:43% 57%;gap:38px;align-items:center}
+.hero-photo{width:100%;height:330px;display:block;object-fit:cover;object-position:center 38%;border-radius:14px;filter:grayscale(100%);border:1px solid #164c36;box-shadow:0 0 40px rgba(32,201,135,.08)}
+.hero-content{padding-right:15px}.badge{display:inline-flex;align-items:center;gap:7px;background:#0c2119;border-radius:999px;padding:6px 10px;color:var(--green);font-size:9px;font-weight:900;letter-spacing:.5px}.dot{width:7px;height:7px;border-radius:50%;background:var(--green)}
+h1{font-size:clamp(38px,5vw,56px);line-height:1.02;letter-spacing:-2.3px;margin:17px 0 13px}h1 span{color:var(--green)}
+.lead{color:var(--muted);font-size:13px;max-width:510px;margin:0}.actions{display:flex;gap:10px;margin-top:20px}.btn{border:1px solid var(--green);border-radius:6px;padding:10px 15px;font-size:11px;font-weight:800}.btn.primary{background:var(--green);color:#06100c}.btn:hover{transform:translateY(-2px)}
+
+.trusted{padding:3px 0 20px}.label{color:#7d898f;font-size:9px;letter-spacing:.7px;margin:0 0 12px 22px}.trusted-row{display:grid;grid-template-columns:repeat(6,1fr);gap:10px;color:#b7bec2;font-size:13px;font-weight:800;text-align:center}
+.trusted-row div{padding:7px 3px}.trusted-row b{font-size:17px;color:#d2d7d9;margin-right:5px}
+
+.section{padding:22px 0}.section-title{text-align:center;font-size:13px;letter-spacing:.3px;margin:0 0 14px;font-weight:900}.section-title:after{content:"";display:block;width:25px;height:2px;background:var(--green);margin:7px auto 0}
+.tech-grid{display:grid;grid-template-columns:repeat(10,1fr);gap:8px}.tech{background:var(--panel);border:1px solid rgba(255,255,255,.04);border-radius:7px;padding:12px 5px;text-align:center;font-size:9px;color:#d2d7da;font-weight:700;box-shadow:0 5px 15px rgba(0,0,0,.12)}.tech strong{display:block;font-size:18px;color:#d9dfe1;margin-bottom:3px}
+
+.stats{display:grid;grid-template-columns:repeat(5,1fr);background:linear-gradient(90deg,#11181c,#10161a);border-radius:11px;border:1px solid rgba(255,255,255,.04);padding:13px 10px;margin-top:18px}.stat{text-align:center;border-right:1px solid #334047}.stat:last-child{border:0}.stat strong{display:block;color:var(--green);font-size:25px;line-height:1}.stat span{display:block;color:#a7b0b5;font-size:8px;margin-top:3px}
+
+.cards{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}.card{background:linear-gradient(145deg,#12191e,#10161a);border:1px solid rgba(255,255,255,.035);border-radius:7px;padding:13px 11px;min-height:135px}.card .icon{font-size:17px;color:var(--green)}.card h3{font-size:11px;line-height:1.2;margin:8px 0 6px}.card p{font-size:9px;color:#a8b1b6;line-height:1.35;margin:0}
+
+.projects{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.project{background:var(--panel);border:1px solid rgba(255,255,255,.04);border-radius:7px;overflow:hidden}.project-shot{height:88px;background:#1b242a;position:relative;overflow:hidden}.project-shot:before{content:"";position:absolute;inset:10px 10px 0;background:linear-gradient(135deg,#e9ecec 0 45%,#b9d1cf 45% 60%,#172026 60%);opacity:.88}.project:nth-child(2) .project-shot:before{background:linear-gradient(135deg,#18282e,#267b72 55%,#e9ecec 55%)}.project:nth-child(3) .project-shot:before{background:linear-gradient(135deg,#f0eee6,#d6e5e1 55%,#4d8f83 55%)}.project:nth-child(4) .project-shot:before{background:linear-gradient(135deg,#17182c,#34336d 55%,#12151b 55%)}
+.project-body{padding:9px}.project h3{font-size:11px;margin:0 0 7px}.tags{display:flex;gap:4px;flex-wrap:wrap}.tag{background:#20282e;color:#c7ced1;border-radius:4px;padding:3px 6px;font-size:8px}.view-all{text-align:center;color:var(--green);font-size:10px;font-weight:800;margin-top:10px}
+
+.testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.quote{background:var(--panel);border:1px solid rgba(255,255,255,.04);border-radius:8px;padding:15px;min-height:120px}.quote-mark{font-size:30px;color:var(--green);line-height:.7}.quote p{font-size:10px;color:#c4ccd0;margin:7px 0 11px;line-height:1.45}.person{display:flex;align-items:center;gap:8px}.avatar{width:27px;height:27px;border-radius:50%;background:#536068;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:900}.person strong{display:block;font-size:9px}.person small{color:#879298;font-size:8px}
+
+.contact{padding:20px 0 8px}.contact-box{display:flex;align-items:center;justify-content:space-between;gap:20px;background:linear-gradient(90deg,#0c2d20,#10181a);border:1px solid #174d37;border-radius:11px;padding:14px 20px}.contact-left{display:flex;align-items:center;gap:14px}.contact-icon{width:43px;height:43px;border-radius:50%;background:var(--green);color:#06100c;display:flex;align-items:center;justify-content:center;font-size:18px}.contact-box h2{font-size:16px;margin:0}.contact-box p{font-size:9px;color:#91a19b;margin:2px 0 0}
+
+.footer{display:grid;grid-template-columns:1.3fr 1fr 1fr 1.3fr;gap:20px;align-items:center;padding:12px 0 20px}.footer-brand{display:flex;gap:9px;align-items:center}.footer .logo{font-size:30px}.footer strong{font-size:11px}.footer small{display:block;color:#8c969c;font-size:8px}.footer-item{font-size:9px;color:#a6afb4}.footer-bottom{text-align:center;color:#5e686e;font-size:8px;padding:8px 0 20px;border-top:1px solid rgba(255,255,255,.03)}
+
+@media(max-width:900px){.links{display:none}.cv{margin-left:auto}.hero-grid{grid-template-columns:1fr}.hero-content{padding:20px 0}.hero-photo{height:390px}.tech-grid{grid-template-columns:repeat(5,1fr)}.cards{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:600px){.nav{height:60px}.brand{min-width:0}.brand-text{font-size:11px}.hero-photo{height:320px}.trusted-row{grid-template-columns:repeat(3,1fr)}.tech-grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr);gap:10px}.stat{border:0}.cards,.projects,.testimonials{grid-template-columns:1fr}.contact-box{display:block}.contact-left{margin-bottom:12px}.footer{grid-template-columns:1fr 1fr}}
 </style>
 </head>
 <body>
 
-<nav>
-  <div class="container nav">
-    <a class="brand" href="#"><span class="logo">AV</span> Albert Villagracia</a>
-    <div class="navlinks">
-      <a class="active" href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a>
-      <a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#contact">Contact</a>
-    </div>
-    <a class="cv" href="./Albert-Villagracia-CV.pdf" download>
-    ↓ Download CV
-</a>
-  </div>
-</nav>
+<nav><div class="container nav">
+<a class="brand" href="#home"><span class="logo">AV</span><span class="brand-text">Albert Villagracia<small>WordPress Developer</small></span></a>
+<div class="links"><a class="active" href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#skills">Skills</a><a href="#testimonials">Testimonials</a><a href="#contact">Contact</a></div>
+<a class="cv" href="./Albert-Villagracia-CV.pdf" download>♧ &nbsp; Download CV</a>
+</div></nav>
 
 <main id="home">
-<section class="hero">
-<div class="container hero-grid">
-  <div class="photo-wrap"><img class="hero-photo" src="./albert-photo.png" alt="Albert Villagracia working on a laptop"></div>
-  <div>
-    <div class="badge"><span class="dot"></span> WordPress Developer</div>
-    <h1>Developer who solves <span>problems</span>, not just builds pages.</h1>
-    <p class="hero-copy">With 5+ years of experience building high-performance, user-friendly WordPress websites. I turn ideas into powerful digital solutions that drive results.</p>
-    <div class="buttons">
-      <a class="btn primary" href="#projects">🚀 &nbsp;View My Work</a>
-      <a class="btn" href="#contact">💬 &nbsp;Let's Talk</a>
-    </div>
-  </div>
-</div>
-</section>
-
-<section class="trusted">
-<div class="container">
-<div class="trusted-title">TRUSTED BY CLIENTS &amp; BUSINESSES</div>
-<div class="tools"><div class="tool">WordPress</div><div class="tool">WooCommerce</div><div class="tool">LearnDash</div><div class="tool">BuddyBoss</div><div class="tool">Elementor</div><div class="tool">Crocoblocks</div></div>
-</div>
-</section>
-
-<section id="about"><div class="container about-grid">
-<div><span class="eyebrow">About Me</span><h2 class="section-title">I build websites that work as hard as you do.</h2></div>
-<div class="about">
-<p>I'm a WordPress developer with 5+ years of experience working across frontend and backend development.</p>
-<p>My experience includes Elementor, Bricks, Kadence, WooCommerce, BuddyBoss, LearnDash, GamiPress, JetEngine, ActiveCampaign, Memberium, Paid Memberships Pro, and custom PHP/JavaScript solutions.</p>
-<p>I’m comfortable taking projects from implementation and integrations through troubleshooting, optimization, maintenance, and launch.</p>
+<section class="hero"><div class="container hero-grid">
+<div><img class="hero-photo" src="./albert-photo.png" alt="Albert Villagracia working on a laptop"></div>
+<div class="hero-content">
+<div class="badge"><span class="dot"></span> WORDPRESS DEVELOPER</div>
+<h1>I Build High-Performance <span>WordPress</span> Websites That Drive Results</h1>
+<p class="lead">I help businesses, coaches, and professionals build fast, secure, and scalable WordPress websites that not only look great but also deliver real results.</p>
+<div class="actions"><a class="btn primary" href="#projects">➤ &nbsp; View My Work</a><a class="btn" href="#contact">◯ &nbsp; Let's Work Together</a></div>
 </div>
 </div></section>
 
-<section id="services"><div class="container">
-<span class="eyebrow">What I Do</span><h2 class="section-title">Services</h2>
+<section class="trusted"><div class="container"><div class="label">TRUSTED BY CLIENTS &amp; BUSINESSES</div><div class="trusted-row"><div><b>◉</b>WordPress</div><div><b>Woo</b>COMMERCE</div><div><b>▮</b>LearnDash</div><div><b>●</b>buddyboss</div><div><b>▣</b>elementor</div><div><b>◒</b>crocoblocks</div></div></div></section>
+
+<section id="about" class="section"><div class="container">
+<h2 class="section-title">TECHNOLOGIES &amp; TOOLS I WORK WITH →</h2>
+<div class="tech-grid">
+<div class="tech"><strong>◉</strong>WordPress</div><div class="tech"><strong>Woo</strong>WooCommerce</div><div class="tech"><strong>▣</strong>Elementor</div><div class="tech"><strong>▮</strong>LearnDash</div><div class="tech"><strong>◒</strong>Crocoblocks</div><div class="tech"><strong>●</strong>BuddyBoss</div><div class="tech"><strong>Jet</strong>JetEngine</div><div class="tech"><strong>ACF</strong>ACF</div><div class="tech"><strong>PHP</strong>PHP</div><div class="tech"><strong>My</strong>MySQL</div>
+</div>
+<div class="stats">
+<div class="stat"><strong>5+</strong><span>Years Experience</span></div><div class="stat"><strong>100+</strong><span>Websites Built</span></div><div class="stat"><strong>90+</strong><span>Happy Clients</span></div><div class="stat"><strong>100%</strong><span>Job Success Score</span></div><div class="stat"><strong>5,000+</strong><span>Hours Worked</span></div>
+</div>
+</div></section>
+
+<section id="services" class="section"><div class="container">
+<h2 class="section-title">WHAT I DO →</h2>
 <div class="cards">
-<div class="card"><h3>WordPress Development</h3><p>Custom pages, themes, templates, responsive layouts, functionality and technical fixes.</p></div>
-<div class="card"><h3>Membership & LMS</h3><p>BuddyBoss, LearnDash, GamiPress, PMPro, Memberium, protected content and enrollment flows.</p></div>
-<div class="card"><h3>WooCommerce</h3><p>Products, subscriptions, checkout customization, payment integrations and custom workflows.</p></div>
-<div class="card"><h3>Integrations</h3><p>Connect WordPress with CRMs, forms, marketing tools, automation platforms and APIs.</p></div>
-<div class="card"><h3>Speed Optimization</h3><p>Caching, image optimization, asset cleanup, database review and performance improvements.</p></div>
-<div class="card"><h3>Debugging & Maintenance</h3><p>Plugin conflicts, PHP errors, broken layouts, forms, checkout issues and ongoing maintenance.</p></div>
+<div class="card"><div class="icon">♧</div><h3>Custom WordPress Development</h3><p>High-performance, custom WordPress solutions tailored to your business needs.</p></div>
+<div class="card"><div class="icon">♟</div><h3>Theme &amp; Plugin Customization</h3><p>Customize themes and plugins for better functionality and user experience.</p></div>
+<div class="card"><div class="icon">♢</div><h3>LMS &amp; Membership Sites</h3><p>Build powerful LMS and membership websites with LearnDash, BuddyBoss, and more.</p></div>
+<div class="card"><div class="icon">🛒</div><h3>E-commerce Solutions</h3><p>WooCommerce stores that are fast, secure, and built to increase sales.</p></div>
+<div class="card"><div class="icon">♨</div><h3>Performance Optimization</h3><p>Speed up your website for better performance, SEO rankings, and user experience.</p></div>
+<div class="card"><div class="icon">✿</div><h3>Maintenance &amp; Support</h3><p>Reliable ongoing maintenance and support to keep your website running well.</p></div>
 </div></div></section>
 
-<section id="projects"><div class="container">
-<span class="eyebrow">Selected Work</span><h2 class="section-title">Projects & Experience</h2>
-<div class="cards">
-<div class="card"><h3>Membership Platforms</h3><p>Membership and community websites with protected content, user flows and automation.</p><div class="tags"><span class="tag">BuddyBoss</span><span class="tag">PMPro</span><span class="tag">GamiPress</span></div></div>
-<div class="card"><h3>Online Learning</h3><p>Course websites, enrollment flows, group registration and protected learning content.</p><div class="tags"><span class="tag">LearnDash</span><span class="tag">WooCommerce</span></div></div>
-<div class="card"><h3>WooCommerce</h3><p>E-commerce stores with subscriptions, checkout customizations and payment integrations.</p><div class="tags"><span class="tag">WooCommerce</span><span class="tag">Subscriptions</span></div></div>
-</div></div></section>
+<section id="projects" class="section"><div class="container">
+<h2 class="section-title">FEATURED PROJECTS →</h2>
+<div class="projects">
+<div class="project"><div class="project-shot"></div><div class="project-body"><h3>Firm Incubator</h3><div class="tags"><span class="tag">WordPress</span><span class="tag">Custom</span><span class="tag">Elementor</span></div></div></div>
+<div class="project"><div class="project-shot"></div><div class="project-body"><h3>Nonordinary</h3><div class="tags"><span class="tag">WordPress</span><span class="tag">Membership</span><span class="tag">LMS</span></div></div></div>
+<div class="project"><div class="project-shot"></div><div class="project-body"><h3>The Online Dog Trainer</h3><div class="tags"><span class="tag">WordPress</span><span class="tag">LMS</span><span class="tag">WooCommerce</span></div></div></div>
+<div class="project"><div class="project-shot"></div><div class="project-body"><h3>Life CEO</h3><div class="tags"><span class="tag">WordPress</span><span class="tag">Custom</span><span class="tag">Elementor</span></div></div></div>
+</div>
+<div class="view-all">View All Projects &nbsp;❯</div>
+</div></section>
 
-<section id="skills"><div class="container">
-<span class="eyebrow">Technical Skills</span><h2 class="section-title">Tools I Work With</h2>
-<div class="skills">
-<span class="skill">WordPress</span><span class="skill">PHP</span><span class="skill">JavaScript</span><span class="skill">HTML / CSS</span><span class="skill">Elementor</span><span class="skill">Bricks</span><span class="skill">Kadence</span><span class="skill">WooCommerce</span><span class="skill">LearnDash</span><span class="skill">BuddyBoss</span><span class="skill">GamiPress</span><span class="skill">JetEngine</span><span class="skill">JetFormBuilder</span><span class="skill">ACF</span><span class="skill">ActiveCampaign</span><span class="skill">Memberium</span><span class="skill">PMPro</span><span class="skill">Zapier</span><span class="skill">Cloudflare</span><span class="skill">WP Rocket</span>
-</div></div></section>
+<section id="testimonials" class="section"><div class="container">
+<h2 class="section-title">WHAT CLIENTS SAY →</h2>
+<div class="testimonials">
+<div class="quote"><div class="quote-mark">“</div><p>Albert is a skilled WordPress developer who delivers high-quality work on time. He’s reliable, communicative, and a pleasure to work with.</p><div class="person"><div class="avatar">MN</div><div><strong>Matt Navid, Esq.</strong><small>Firm Incubator</small></div></div></div>
+<div class="quote"><div class="quote-mark">“</div><p>I was working on an incomplete project and was stuck for weeks until I was able to sit down with Albert. Before i even awarded him the project, he got on a call with me and went over the issues of my website in a clear manner. Once i awarded him the job he fixed my website within 48 hours. I will be using him to customize my site again in the near future.</p><div class="person"><div class="avatar">MV</div><div><strong>Joel Bellevue</strong><small>MoneyCodez</small></div></div></div>
+<div class="quote"><div class="quote-mark">“</div><p>Albert is my go-to developer for WordPress projects. He’s fast, knowledgeable, and always delivers results.</p><div class="person"><div class="avatar">ST</div><div><strong>Ed Hurley</strong><small>Verlia</small></div></div></div>
+</div>
+</div></section>
 
-<section id="contact"><div class="container"><div class="contact-box">
-<span class="eyebrow">Let's Connect</span><h2 class="section-title">Have a WordPress project?</h2>
-<p>Need a new website, improvements to an existing site, or help solving a difficult WordPress issue? Let's talk.</p>
-<a class="email" href="mailto:albertvilla22@gmail.com">albertvilla22@gmail.com</a>
-<div class="buttons"><a class="btn primary" href="mailto:albertvilla22@gmail.com">Email Me</a><a class="btn" href="https://www.linkedin.com/in/albert-ricard-villagracia/" target="_blank">LinkedIn</a></div>
+<section id="contact" class="contact"><div class="container"><div class="contact-box">
+<div class="contact-left"><div class="contact-icon">➤</div><div><h2>Have a project in mind?</h2><p>Let’s build something amazing together.</p></div></div>
+<a class="btn primary" href="mailto:albertvilla22@gmail.com>◯ &nbsp; Let’s Talk</a>
 </div></div></section>
 </main>
-<footer><div class="container">© 2026 Albert Villagracia · WordPress Developer</div></footer>
+
+<footer><div class="container">
+<div class="footer">
+<div class="footer-brand"><span class="logo">AV</span><div><strong>Albert Villagracia</strong><small>WordPress Developer</small></div></div>
+<div class="footer-item">✉ &nbsp; albertvilla22@gmail.com</div><div class="footer-item">⌖ &nbsp; Cebu City, Philippines</div><div class="footer-item">in &nbsp; linkedin.com/in/albert-villagracia</div>
+</div>
+<div class="footer-bottom">© 2026 Albert Villagracia. All rights reserved.</div>
+</div></footer>
 </body>
 </html>
