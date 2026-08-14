@@ -34,7 +34,13 @@ h1{font-size:clamp(38px,5vw,56px);line-height:1.02;letter-spacing:-2.3px;margin:
 
 .cards{display:grid;grid-template-columns:repeat(6,1fr);gap:8px}.card{background:linear-gradient(145deg,#12191e,#10161a);border:1px solid rgba(255,255,255,.035);border-radius:7px;padding:13px 11px;min-height:135px}.card .icon{font-size:17px;color:var(--green)}.card h3{font-size:11px;line-height:1.2;margin:8px 0 6px}.card p{font-size:9px;color:#a8b1b6;line-height:1.35;margin:0}
 
-.projects{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.project{background:var(--panel);border:1px solid rgba(255,255,255,.04);border-radius:7px;overflow:hidden}.project-shot{height:88px;background:#1b242a;position:relative;overflow:hidden}.project-shot:before{content:"";position:absolute;inset:10px 10px 0;background:linear-gradient(135deg,#e9ecec 0 45%,#b9d1cf 45% 60%,#172026 60%);opacity:.88}.project:nth-child(2) .project-shot:before{background:linear-gradient(135deg,#18282e,#267b72 55%,#e9ecec 55%)}.project:nth-child(3) .project-shot:before{background:linear-gradient(135deg,#f0eee6,#d6e5e1 55%,#4d8f83 55%)}.project:nth-child(4) .project-shot:before{background:linear-gradient(135deg,#17182c,#34336d 55%,#12151b 55%)}
+.projects{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.project{background:var(--panel);border:1px solid rgba(255,255,255,.06);border-radius:10px;overflow:hidden}
+.project-shot{height:165px;background:#111820;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}
+.project-shot img{width:100%;height:100%;display:block;object-fit:contain;object-position:center center;background:#111820;transition:transform .35s ease}
+.project:hover .project-shot img{transform:scale(1.02)}
+@media(max-width:900px){.projects{grid-template-columns:repeat(2,1fr)}.project-shot{height:180px}}
+@media(max-width:560px){.projects{grid-template-columns:1fr}.project-shot{height:210px}}
 .project-body{padding:9px}.project h3{font-size:11px;margin:0 0 7px}.tags{display:flex;gap:4px;flex-wrap:wrap}.tag{background:#20282e;color:#c7ced1;border-radius:4px;padding:3px 6px;font-size:8px}.view-all{text-align:center;color:var(--green);font-size:10px;font-weight:800;margin-top:10px}
 
 .testimonials{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.quote{background:var(--panel);border:1px solid rgba(255,255,255,.04);border-radius:8px;padding:15px;min-height:120px}.quote-mark{font-size:30px;color:var(--green);line-height:.7}.quote p{font-size:10px;color:#c4ccd0;margin:7px 0 11px;line-height:1.45}.person{display:flex;align-items:center;gap:8px}.avatar{width:27px;height:27px;border-radius:50%;background:#536068;display:flex;align-items:center;justify-content:center;font-size:9px;font-weight:900}.person strong{display:block;font-size:9px}.person small{color:#879298;font-size:8px}
@@ -45,6 +51,7 @@ h1{font-size:clamp(38px,5vw,56px);line-height:1.02;letter-spacing:-2.3px;margin:
 
 @media(max-width:900px){.links{display:none}.cv{margin-left:auto}.hero-grid{grid-template-columns:1fr}.hero-content{padding:20px 0}.hero-photo{height:390px}.tech-grid{grid-template-columns:repeat(5,1fr)}.cards{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:600px){.nav{height:60px}.brand{min-width:0}.brand-text{font-size:11px}.hero-photo{height:320px}.trusted-row{grid-template-columns:repeat(3,1fr)}.tech-grid{grid-template-columns:repeat(2,1fr)}.stats{grid-template-columns:repeat(2,1fr);gap:10px}.stat{border:0}.cards,.projects,.testimonials{grid-template-columns:1fr}.contact-box{display:block}.contact-left{margin-bottom:12px}.footer{grid-template-columns:1fr 1fr}}
+.project-shot.image-error::after{content:"Project image unavailable";color:#8d98a5;font-size:12px;letter-spacing:.04em}
 </style>
 </head>
 <body>
@@ -93,19 +100,19 @@ h1{font-size:clamp(38px,5vw,56px);line-height:1.02;letter-spacing:-2.3px;margin:
 <h2 class="section-title">FEATURED PROJECTS →</h2>
 <div class="projects">
 <div class="project">
-  <div class="project-shot"><img src="./tlcauto.png" alt="TLC Auto Repair Experts website"></div>
+  <div class="project-shot"><img src="./tlcauto.png" alt="TLC Auto Repair Experts website" onerror="this.style.display='none';this.parentElement.classList.add('image-error')"></div>
   <div class="project-body"><h3>TLC Auto Repair Experts</h3><div class="tags"><span class="tag">WordPress</span><span class="tag">Elementor</span><span class="tag">Business</span></div></div>
 </div>
 <div class="project">
-  <div class="project-shot"><img src="./firmincubator.png" alt="The Law Firm Incubator website"></div>
+  <div class="project-shot"><img src="./firmincubator.png" alt="The Law Firm Incubator website" onerror="this.style.display='none';this.parentElement.classList.add('image-error')"></div>
   <div class="project-body"><h3>Firm Incubator</h3><div class="tags"><span class="tag">WordPress</span><span class="tag">Custom</span><span class="tag">Elementor</span></div></div>
 </div>
 <div class="project">
-  <div class="project-shot"><img src="./verlia.png" alt="Verlia website"></div>
+  <div class="project-shot"><img src="./verlia.png" alt="Verlia website" onerror="this.style.display='none';this.parentElement.classList.add('image-error')"></div>
   <div class="project-body"><h3>Verlia</h3><div class="tags"><span class="tag">WordPress</span><span class="tag">Custom</span><span class="tag">E-commerce</span></div></div>
 </div>
 <div class="project">
-  <div class="project-shot"><img src="./moneycodez.png" alt="MoneyCodez website"></div>
+  <div class="project-shot"><img src="./moneycodez.png" alt="MoneyCodez website" onerror="this.style.display='none';this.parentElement.classList.add('image-error')"></div>
   <div class="project-body"><h3>MoneyCodez</h3><div class="tags"><span class="tag">WordPress</span><span class="tag">Custom</span><span class="tag">Membership</span></div></div>
 </div>
 </div>
